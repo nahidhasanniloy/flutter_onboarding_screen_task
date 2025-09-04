@@ -5,6 +5,7 @@ class CustomButton extends StatelessWidget {
   final VoidCallback onPressed;
   final Color color;
   final double borderRadius;
+  final IconData? suffixIcon; // 👉 নতুন
 
   const CustomButton({
     super.key,
@@ -12,6 +13,7 @@ class CustomButton extends StatelessWidget {
     required this.onPressed,
     this.color = Colors.purple,
     this.borderRadius = 10,
+    this.suffixIcon, // 👉 optional
   });
 
   @override
@@ -27,9 +29,19 @@ class CustomButton extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 14),
         ),
         onPressed: onPressed,
-        child: Text(
-          text,
-          style: const TextStyle(fontSize: 16, color: Colors.white),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              text,
+              style: const TextStyle(fontSize: 16, color: Colors.white),
+            ),
+            if (suffixIcon != null) ...[
+              const SizedBox(width: 8),
+              Icon(suffixIcon, color: Colors.white, size: 20),
+            ],
+          ],
         ),
       ),
     );

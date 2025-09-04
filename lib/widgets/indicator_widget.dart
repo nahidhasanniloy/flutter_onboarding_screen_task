@@ -6,7 +6,6 @@ class PageIndicator extends StatelessWidget {
   final Color? color2;
 
 
-
   const PageIndicator({super.key,this.color, this.color1,this.color2});
 
   @override
