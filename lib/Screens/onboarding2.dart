@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../utils/colors.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/indicator_widget.dart';
-import 'HomeScreen/home_screen.dart';
+import 'LocationScreen/location_screen.dart';
 import 'onboarding3.dart';
 
 class Onboarding2 extends StatelessWidget {
@@ -31,8 +31,8 @@ class Onboarding2 extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
-                // ============================== this is a skip section ==============================//
 
+                // ============================== this is a skip section ==============================//
                 SafeArea(
                   child: Align(
                     alignment: Alignment.topRight,
@@ -43,7 +43,7 @@ class Onboarding2 extends StatelessWidget {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const HomeScreen(),
+                              builder: (context) => const LocationScreen(),
                             ),
                           );
                         },
@@ -60,19 +60,14 @@ class Onboarding2 extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
           ),
-
-
 
           // ================================== Text Section ========================//
           Expanded(
             flex: 5,
             child: Container(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 20,
-                vertical: 30,
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
               color: Colors.grey.shade900,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -99,7 +94,6 @@ class Onboarding2 extends StatelessWidget {
                   const SizedBox(height: 20),
 
                   // =================================== custom button ==================================//
-
                   CustomButton(
                     text: 'Text',
                     onPressed: () {
@@ -111,8 +105,6 @@ class Onboarding2 extends StatelessWidget {
                       );
                     },
                   ),
-
-
                 ],
               ),
             ),

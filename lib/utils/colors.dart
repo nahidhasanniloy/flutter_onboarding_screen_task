@@ -6,4 +6,5 @@ class AppColors {
   static Color backgroundColor = Color(0xff212327);
   static Color whiteColor = Color(0xffffffff);
   static Color homeButtonColor = Color(0xff4c4c4c);
+  static Color alarmButtonColor = Color(0xff3c3d3f);
 }

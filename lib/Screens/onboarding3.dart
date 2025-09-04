@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
 import '../utils/colors.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/indicator_widget.dart';
-import 'HomeScreen/home_screen.dart';
+import 'LocationScreen/location_screen.dart';
 
 class Onboarding3 extends StatelessWidget {
   const Onboarding3({super.key});
@@ -40,7 +39,7 @@ class Onboarding3 extends StatelessWidget {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const HomeScreen(),
+                              builder: (context) => const LocationScreen(),
                             ),
                           );
                         },
@@ -93,23 +92,17 @@ class Onboarding3 extends StatelessWidget {
                   const SizedBox(height: 20),
 
                   // =================================== custom button page 2 ==================================//
-
                   CustomButton(
                     text: 'Text',
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
+                          builder: (context) => const LocationScreen(),
                         ),
                       );
                     },
                   ),
-
-
-
-
-
                 ],
               ),
             ),

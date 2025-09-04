@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task/utils/colors.dart';
 import 'package:task/widgets/custom_button.dart';
 import '../widgets/indicator_widget.dart';
-import 'HomeScreen/home_screen.dart';
+import 'LocationScreen/location_screen.dart';
 import 'onboarding2.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -42,7 +42,7 @@ class OnBoardingScreen extends StatelessWidget {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const HomeScreen(),
+                              builder: (context) => const LocationScreen(),
                             ),
                           );
                         },
